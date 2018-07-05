@@ -6,7 +6,8 @@ using UnityEngine;
 public class AudioPeer : MonoBehaviour
 {
     AudioSource audioSource;
-    public static float[] samples = new float[512];
+    public static float[] samplesLeft = new float[512];
+    public static float[] samplesRight = new float[512];
     public static float[] frequencyBand = new float[8];
     public static float[] bandBuffer = new float[8];
     public static float[] audioBand = new float[8];
@@ -21,6 +22,15 @@ public class AudioPeer : MonoBehaviour
     float[] bufferDecrease = new float[8];
     float[] freqBandHighest = new float[8];
     float amplitudeHighest;
+
+    public enum Channel
+    {
+        Stereo,
+        Left,
+        Right
+    }
+
+    public Channel channel = new Channel();
 
 	void Start ()
     {
@@ -54,7 +64,8 @@ public class AudioPeer : MonoBehaviour
 
     void GetSpectrumAudioSource()
     {
-        audioSource.GetSpectrumData(samples, 0, FFTWindow.Blackman);
+        audioSource.GetSpectrumData(samplesLeft, 0, FFTWindow.Blackman);
+        audioSource.GetSpectrumData(samplesRight, 1, FFTWindow.Blackman);
     }
 
     void MakeFrequencyBands()
@@ -71,7 +82,7 @@ public class AudioPeer : MonoBehaviour
 
             for (int j = 0; j < sampleCount; j++)
             {
-                average += samples[count] * (count+1);
+                average += channel == Channel.Stereo ? (samplesLeft[count] + samplesRight[count]) * (count + 1) : channel == Channel.Left ? samplesLeft[count] * (count + 1) : samplesRight[count] * (count + 1);
                 count++;
             }
 
