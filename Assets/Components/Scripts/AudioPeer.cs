@@ -9,9 +9,13 @@ public class AudioPeer : MonoBehaviour
     public static float[] samples = new float[512];
     public static float[] frequencyBand = new float[8];
     public static float[] bandBuffer = new float[8];
-    float[] bufferDecrease = new float[8];
+    public static float[] audioBand = new float[8];
+    public static float[] audioBandBuffer = new float[8];
 
     public int frequencyBands = 8;
+
+    float[] bufferDecrease = new float[8];
+    float[] freqBandHighest = new float[8];
 
 	void Start ()
     {
@@ -24,7 +28,22 @@ public class AudioPeer : MonoBehaviour
         GetSpectrumAudioSource();
         MakeFrequencyBands();
         BandBuffer();
-	}
+        CreateAudioBands();
+
+    }
+
+    void CreateAudioBands()
+    {
+        for(int i = 0; i < frequencyBands; i++)
+        {
+            if(frequencyBand[i] > freqBandHighest[i])
+            {
+                freqBandHighest[i] = frequencyBand[i];
+            }
+            audioBand[i] = frequencyBand[i] / freqBandHighest[i];
+            audioBandBuffer[i] = bandBuffer[i] / freqBandHighest[i];
+        }
+    }
 
     void GetSpectrumAudioSource()
     {
