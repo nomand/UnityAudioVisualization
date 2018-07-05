@@ -16,6 +16,7 @@ public class AudioPeer : MonoBehaviour
     public static float amplitudeBuffer;
 
     public int frequencyBands = 8;
+    public float audioProfile;
 
     float[] bufferDecrease = new float[8];
     float[] freqBandHighest = new float[8];
@@ -25,7 +26,9 @@ public class AudioPeer : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         frequencyBand = new float[frequencyBands];
-	}
+        AudioProfile(audioProfile);
+
+    }
 	
 	void Update ()
     {
@@ -111,5 +114,13 @@ public class AudioPeer : MonoBehaviour
         }
         amplitude = currentAmplitude / amplitudeHighest;
         amplitudeBuffer = currentAmplitudeBuffer / amplitudeHighest;
+    }
+
+    void AudioProfile(float audioProfile)
+    {
+        for(int i = 0; i < frequencyBands; i++)
+        {
+            freqBandHighest[i] = 0;
+        }
     }
 }

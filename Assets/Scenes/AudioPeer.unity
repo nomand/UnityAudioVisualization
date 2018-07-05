@@ -861,6 +861,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frequencyBands: 8
+  audioProfile: 5
+  freqBandHighest:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!4 &877672659
 Transform:
   m_ObjectHideFlags: 0
