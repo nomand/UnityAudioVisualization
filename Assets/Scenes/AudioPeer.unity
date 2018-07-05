@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c735d8b794d60a479451921c02523b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
   useBuffer: 1
   startScale: 0.5
   maxScale: 2
@@ -633,6 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d990106abb47bd148b88219e29811a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
   band: 2
   startScale: 1
   scale: 50
@@ -703,6 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d990106abb47bd148b88219e29811a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
   band: 7
   startScale: 1
   scale: 50
@@ -728,6 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d990106abb47bd148b88219e29811a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
   band: 0
   startScale: 1
   scale: 50
@@ -860,17 +864,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb833d8e4f0a25448f309392e58a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioBand: []
+  audioBandBuffer: []
+  amplitude: 0
+  amplitudeBuffer: 0
   frequencyBands: 8
   audioProfile: 5
-  freqBandHighest:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  channel: 0
 --- !u!4 &877672659
 Transform:
   m_ObjectHideFlags: 0
@@ -900,6 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d990106abb47bd148b88219e29811a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
   band: 5
   startScale: 1
   scale: 50
@@ -925,6 +926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d990106abb47bd148b88219e29811a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
   band: 4
   startScale: 1
   scale: 50
@@ -1062,6 +1064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d990106abb47bd148b88219e29811a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
   band: 6
   startScale: 1
   scale: 50
@@ -1145,6 +1148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b63bffde60c014d9171444b9c03c47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
   minBrightness: 0
   maxBrightness: 10
   band: 1
@@ -1394,6 +1398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d990106abb47bd148b88219e29811a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
   band: 1
   startScale: 1
   scale: 50
@@ -1419,6 +1424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d990106abb47bd148b88219e29811a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
   band: 3
   startScale: 1
   scale: 50
@@ -1455,9 +1461,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b5da8b07ae80641b1660bb3b387f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
   sampleCubePrefab: {fileID: 1815464489175490, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
     type: 2}
-  radius: 10
+  radius: 5
   scale: 3000
 --- !u!4 &2006171194
 Transform:

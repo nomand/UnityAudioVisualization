@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ParamCube : MonoBehaviour
 {
+    public AudioPeer audioPeer;
     public int band;
     public float startScale;
     public float scale;
@@ -17,8 +18,8 @@ public class ParamCube : MonoBehaviour
 	
 	void Update ()
     {
-        transform.localScale = new Vector3(transform.localScale.x, useBuffer ? AudioPeer.bandBuffer[band] * scale : AudioPeer.frequencyBand[band] * scale + startScale, transform.localScale.z);
-        Color color = new Color(AudioPeer.audioBandBuffer[band], AudioPeer.audioBandBuffer[band], AudioPeer.audioBandBuffer[band]);
+        transform.localScale = new Vector3(transform.localScale.x, useBuffer ? audioPeer.audioBandBuffer[band] * scale : audioPeer.audioBandBuffer[band] * scale + startScale, transform.localScale.z);
+        Color color = new Color(audioPeer.audioBandBuffer[band], audioPeer.audioBandBuffer[band], audioPeer.audioBandBuffer[band]);
         material.SetColor("_EmissionColor", color);
 	}
 }

@@ -6,22 +6,24 @@ using UnityEngine;
 public class AudioPeer : MonoBehaviour
 {
     AudioSource audioSource;
-    public static float[] samplesLeft = new float[512];
-    public static float[] samplesRight = new float[512];
-    public static float[] frequencyBand = new float[8];
-    public static float[] bandBuffer = new float[8];
-    public static float[] audioBand = new float[8];
-    public static float[] audioBandBuffer = new float[8];
 
-    public static float amplitude;
-    public static float amplitudeBuffer;
+    [HideInInspector]
+    public float[] audioBand, audioBandBuffer;
+    [HideInInspector]
+    public float amplitude, amplitudeBuffer;
+    
+    private float[] samplesLeft = new float[512];
+    private float[] samplesRight = new float[512];
+
+    private float[] frequencyBand;
+    private float[] bandBuffer;
+    private float[] bufferDecrease;
+    private float[] freqBandHighest;
+
+    private float amplitudeHighest;
 
     public int frequencyBands = 8;
     public float audioProfile;
-
-    float[] bufferDecrease = new float[8];
-    float[] freqBandHighest = new float[8];
-    float amplitudeHighest;
 
     public enum Channel
     {
@@ -35,9 +37,16 @@ public class AudioPeer : MonoBehaviour
 	void Start ()
     {
         audioSource = GetComponent<AudioSource>();
-        frequencyBand = new float[frequencyBands];
-        AudioProfile(audioProfile);
 
+        frequencyBand = new float[frequencyBands];
+        bandBuffer = new float[frequencyBands];
+        bufferDecrease = new float[frequencyBands];
+        freqBandHighest = new float[frequencyBands];
+
+        audioBand = new float[frequencyBands];
+        audioBandBuffer = new float[frequencyBands];
+
+        AudioProfile(audioProfile);
     }
 	
 	void Update ()

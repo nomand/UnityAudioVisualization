@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Instatiate512Cubes : MonoBehaviour {
 
+    public AudioPeer audioPeer;
+
     public GameObject sampleCubePrefab;
     public float radius = 100f;
     public float scale = 2f;
@@ -26,13 +28,12 @@ public class Instatiate512Cubes : MonoBehaviour {
 	
 	void Update ()
     {
-		for(int i = 0; i < 512; i++)
+		for(int i = 0; i < 8; i++)
         {
             if(sampleCube != null)
             {
-                sampleCube[i].transform.localScale = new Vector3(10, (AudioPeer.samplesLeft[i] + AudioPeer.samplesRight[i]) * scale + 2, 10);
+                sampleCube[i].transform.localScale = new Vector3(10, audioPeer.audioBand[i] * scale + 2, 10);
             }
         }
-                
 	}
 }

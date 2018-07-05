@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ScaleOnAmplitude : MonoBehaviour
 {
+    public AudioPeer audioPeer;
     public bool useBuffer;
     public float startScale;
     public float maxScale;
@@ -11,8 +12,8 @@ public class ScaleOnAmplitude : MonoBehaviour
 	void Update ()
     {
         if (!useBuffer)
-            transform.localScale = new Vector3(AudioPeer.amplitude * maxScale + startScale, AudioPeer.amplitude * maxScale + startScale, AudioPeer.amplitude * maxScale + startScale);
+            transform.localScale = new Vector3(audioPeer.amplitude * maxScale + startScale, audioPeer.amplitude * maxScale + startScale, audioPeer.amplitude * maxScale + startScale);
         else
-            transform.localScale = new Vector3(AudioPeer.amplitudeBuffer * maxScale + startScale, AudioPeer.amplitudeBuffer * maxScale + startScale, AudioPeer.amplitudeBuffer * maxScale + startScale);
+            transform.localScale = new Vector3(audioPeer.amplitudeBuffer * maxScale + startScale, audioPeer.amplitudeBuffer * maxScale + startScale, audioPeer.amplitudeBuffer * maxScale + startScale);
     }
 }
