@@ -12,10 +12,14 @@ public class AudioPeer : MonoBehaviour
     public static float[] audioBand = new float[8];
     public static float[] audioBandBuffer = new float[8];
 
+    public static float amplitude;
+    public static float amplitudeBuffer;
+
     public int frequencyBands = 8;
 
     float[] bufferDecrease = new float[8];
     float[] freqBandHighest = new float[8];
+    float amplitudeHighest;
 
 	void Start ()
     {
@@ -29,7 +33,7 @@ public class AudioPeer : MonoBehaviour
         MakeFrequencyBands();
         BandBuffer();
         CreateAudioBands();
-
+        GetAmplitude();
     }
 
     void CreateAudioBands()
@@ -88,5 +92,24 @@ public class AudioPeer : MonoBehaviour
                 bufferDecrease[i] *= 1.2f;
             }
         }
+    }
+
+
+    void GetAmplitude()
+    {
+        float currentAmplitude = 0;
+        float currentAmplitudeBuffer = 0;
+
+        for(int i = 0; i < frequencyBands; i++)
+        {
+            currentAmplitude += audioBand[i];
+            currentAmplitudeBuffer += audioBandBuffer[i];
+        }
+        if(currentAmplitude > amplitudeHighest)
+        {
+            amplitudeHighest = currentAmplitude;
+        }
+        amplitude = currentAmplitude / amplitudeHighest;
+        amplitudeBuffer = currentAmplitudeBuffer / amplitudeHighest;
     }
 }
