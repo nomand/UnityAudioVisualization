@@ -79,6 +79,7 @@ public class AudioPeer : MonoBehaviour
 
             for (int j = 0; j < sampleCount; j++)
             {
+                print(sampleCount);
                 if (channel == Channel.Stereo)
                 {
                     average += (samplesLeft[count] + samplesRight[count]) * (count + 1);
