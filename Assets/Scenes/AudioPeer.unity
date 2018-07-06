@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -305,7 +305,7 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   useBuffer: 1
   startScale: 0.5
-  maxScale: 2
+  maxScale: 1.2
 --- !u!1001 &114891382
 Prefab:
   m_ObjectHideFlags: 0
@@ -553,13 +553,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 282840810}
-  m_LocalRotation: {x: 0.39954948, y: -0, z: -0, w: 0.9167116}
+  m_LocalRotation: {x: 0.44652542, y: -0, z: -0, w: 0.8947709}
   m_LocalPosition: {x: 0, y: 11.11, z: -13.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 47.100002, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 53.042004, y: 0, z: 0}
 --- !u!1001 &390954319
 Prefab:
   m_ObjectHideFlags: 0
@@ -637,7 +637,7 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 2
   startScale: 1
-  scale: 50
+  scale: 300
   useBuffer: 1
 --- !u!4 &417984428 stripped
 Transform:
@@ -708,7 +708,7 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 7
   startScale: 1
-  scale: 50
+  scale: 300
   useBuffer: 1
 --- !u!4 &777784875 stripped
 Transform:
@@ -734,7 +734,7 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 0
   startScale: 1
-  scale: 50
+  scale: 300
   useBuffer: 1
 --- !u!4 &817498826 stripped
 Transform:
@@ -767,7 +767,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ce11cf1f72755924f813f9607e1aab33, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c855fc9c54c9d0944ae2c75c804f69aa, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -903,7 +903,7 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 5
   startScale: 1
-  scale: 50
+  scale: 300
   useBuffer: 1
 --- !u!4 &885755330 stripped
 Transform:
@@ -929,7 +929,7 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 4
   startScale: 1
-  scale: 50
+  scale: 300
   useBuffer: 1
 --- !u!4 &959397470 stripped
 Transform:
@@ -1067,7 +1067,7 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 6
   startScale: 1
-  scale: 50
+  scale: 300
   useBuffer: 1
 --- !u!4 &1384626602 stripped
 Transform:
@@ -1117,6 +1117,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 87d87723d3522c64fb41a943050d196b, type: 2}
+    - target: {fileID: 100000, guid: 0ae0b16db3440a04db6d48f190a42650, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ae0b16db3440a04db6d48f190a42650, type: 3}
   m_IsPrefabParent: 0
@@ -1136,7 +1140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1480826926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1401,7 +1405,7 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 1
   startScale: 1
-  scale: 50
+  scale: 300
   useBuffer: 1
 --- !u!4 &1881614202 stripped
 Transform:
@@ -1427,7 +1431,7 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 3
   startScale: 1
-  scale: 50
+  scale: 300
   useBuffer: 1
 --- !u!4 &2001478258 stripped
 Transform:
@@ -1464,8 +1468,8 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   sampleCubePrefab: {fileID: 1815464489175490, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
     type: 2}
-  radius: 5
-  scale: 3000
+  radius: 10
+  scale: 1000
 --- !u!4 &2006171194
 Transform:
   m_ObjectHideFlags: 0

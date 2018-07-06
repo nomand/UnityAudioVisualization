@@ -58,19 +58,6 @@ public class AudioPeer : MonoBehaviour
         GetAmplitude();
     }
 
-    void CreateAudioBands()
-    {
-        for(int i = 0; i < frequencyBands; i++)
-        {
-            if(frequencyBand[i] > freqBandHighest[i])
-            {
-                freqBandHighest[i] = frequencyBand[i];
-            }
-            audioBand[i] = frequencyBand[i] / freqBandHighest[i];
-            audioBandBuffer[i] = bandBuffer[i] / freqBandHighest[i];
-        }
-    }
-
     void GetSpectrumAudioSource()
     {
         audioSource.GetSpectrumData(samplesLeft, 0, FFTWindow.Blackman);
@@ -79,10 +66,11 @@ public class AudioPeer : MonoBehaviour
 
     void MakeFrequencyBands()
     {
-        //0 - 20 - 60 - 250 - 500 - 2000 - 4000 - 6000 - 20000
+        // 20 - 60 - 250 - 500 - 2000 - 4000 - 6000 - 20000
 
         int count = 0;
         float average = 0;
+        //int sampleCount = Mathf.RoundToInt(512 / frequencyBands);
 
         for(int i = 0; i < frequencyBands; i++)
         {
@@ -91,9 +79,27 @@ public class AudioPeer : MonoBehaviour
 
             for (int j = 0; j < sampleCount; j++)
             {
-                average += channel == Channel.Stereo ? (samplesLeft[count] + samplesRight[count]) * (count + 1) : channel == Channel.Left ? samplesLeft[count] * (count + 1) : samplesRight[count] * (count + 1);
+                if (channel == Channel.Stereo)
+                {
+                    average += (samplesLeft[count] + samplesRight[count]) * (count + 1);
+                }
+                else if (channel == Channel.Left)
+                {
+                    average += samplesLeft[count] * (count + 1);
+                }
+                else
+                {
+                    average += samplesRight[count] * (count + 1);
+                }
+
                 count++;
             }
+
+            //for (int j = 0; j < sampleCount; j++)
+            //{
+            //    average += samplesLeft[count] + samplesRight[count] * (count + 1);
+            //    count++;
+            //}
 
             average /= count;
             frequencyBand[i] = average * 10;
@@ -117,6 +123,19 @@ public class AudioPeer : MonoBehaviour
         }
     }
 
+    void CreateAudioBands()
+    {
+        for (int i = 0; i < frequencyBands; i++)
+        {
+            if (frequencyBand[i] > freqBandHighest[i])
+            {
+                freqBandHighest[i] = frequencyBand[i];
+            }
+
+            audioBand[i] = frequencyBand[i] / freqBandHighest[i];
+            audioBandBuffer[i] = bandBuffer[i] / freqBandHighest[i];
+        }
+    }
 
     void GetAmplitude()
     {
