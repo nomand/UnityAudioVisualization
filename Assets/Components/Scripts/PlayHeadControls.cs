@@ -11,17 +11,16 @@ public class PlayHeadControls : MonoBehaviour
 	void Start ()
     {
         slider.minValue = 0;
-        slider.maxValue = audioSource.timeSamples * (1 / audioSource.clip.frequency);
+        slider.maxValue = audioSource.clip.length * audioSource.clip.frequency * audioSource.clip.channels;
     }
 
     void Update()
     {
-        slider.value = audioSource.timeSamples / audioSource.clip.frequency;
-        Debug.Log("what?");
+        slider.value = audioSource.time * audioSource.clip.frequency * audioSource.clip.channels;
     }
 
     public void Scrub()
     {
-        audioSource.time = (int)slider.value;
+        audioSource.time = slider.value / (audioSource.clip.frequency * audioSource.clip.channels);
     }
 }
