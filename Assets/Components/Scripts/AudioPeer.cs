@@ -36,7 +36,19 @@ public class AudioPeer : MonoBehaviour
         Right
     }
 
+    public enum FFTW
+    {
+        Rectangular,
+        Triangle,
+        Hamming,
+        Hanning,
+        Blackman,
+        BlackmanHarris
+    }
+
     public Channel channel = new Channel();
+    public FFTW fft = new FFTW();
+    private FFTWindow fftw;
 
 	void Start ()
     {
@@ -52,6 +64,16 @@ public class AudioPeer : MonoBehaviour
 
         GetFrequencyDistribution();
         MakeAudioProfile(AudioProfile);
+
+        switch(fft)
+        {
+            case FFTW.Blackman:         fftw = FFTWindow.Blackman; break;
+            case FFTW.BlackmanHarris:   fftw = FFTWindow.BlackmanHarris; break;
+            case FFTW.Hamming:          fftw = FFTWindow.Hamming; break;
+            case FFTW.Hanning:          fftw = FFTWindow.Hanning; break;
+            case FFTW.Rectangular:      fftw = FFTWindow.Rectangular; break;
+            case FFTW.Triangle:         fftw = FFTWindow.Triangle; break;
+        }
     }
 
     void Update ()
@@ -62,17 +84,12 @@ public class AudioPeer : MonoBehaviour
         BandBuffer();
         CreateAudioBands();
         GetAmplitude();
-
-        //for(int i = 0; i < FrequencyBands; i++)
-        //{
-        //    print(frequencyBand[i]);
-        //}
     }
 
     void GetSpectrumAudioSource()
     {
-        audioSource.GetSpectrumData(samplesLeft, 0, FFTWindow.Blackman);
-        audioSource.GetSpectrumData(samplesRight, 1, FFTWindow.Blackman);
+        audioSource.GetSpectrumData(samplesLeft, 0, fftw);
+        audioSource.GetSpectrumData(samplesRight, 1, fftw);
     }
 
     void GetFrequencyDistribution()
