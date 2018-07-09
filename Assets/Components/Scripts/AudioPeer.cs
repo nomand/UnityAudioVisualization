@@ -18,7 +18,7 @@ public class AudioPeer : MonoBehaviour
     private float[] samplesLeft = new float[512];
     private float[] samplesRight = new float[512];
 
-    public float[] frequencyBand;
+    private float[] frequencyBand;
     private float[] bandBuffer;
     private float[] bufferDecrease;
     private float[] freqBandHighest;
@@ -47,7 +47,7 @@ public class AudioPeer : MonoBehaviour
     }
 
     public Channel channel = new Channel();
-    public FFTW fft = new FFTW();
+    public FFTW FrequencyReadMethod = new FFTW();
     private FFTWindow fftw;
 
 	void Start ()
@@ -58,32 +58,34 @@ public class AudioPeer : MonoBehaviour
         bandBuffer = new float[FrequencyBands];
         bufferDecrease = new float[FrequencyBands];
         freqBandHighest = new float[FrequencyBands];
-
         AudioBand = new float[FrequencyBands];
         AudioBandBuffer = new float[FrequencyBands];
 
+        switch (FrequencyReadMethod)
+        {
+            case FFTW.Blackman: fftw = FFTWindow.Blackman; break;
+            case FFTW.BlackmanHarris: fftw = FFTWindow.BlackmanHarris; break;
+            case FFTW.Hamming: fftw = FFTWindow.Hamming; break;
+            case FFTW.Hanning: fftw = FFTWindow.Hanning; break;
+            case FFTW.Rectangular: fftw = FFTWindow.Rectangular; break;
+            case FFTW.Triangle: fftw = FFTWindow.Triangle; break;
+            default: fftw = FFTWindow.Blackman; break;
+        }
+
         GetFrequencyDistribution();
         MakeAudioProfile(AudioProfile);
-
-        switch(fft)
-        {
-            case FFTW.Blackman:         fftw = FFTWindow.Blackman; break;
-            case FFTW.BlackmanHarris:   fftw = FFTWindow.BlackmanHarris; break;
-            case FFTW.Hamming:          fftw = FFTWindow.Hamming; break;
-            case FFTW.Hanning:          fftw = FFTWindow.Hanning; break;
-            case FFTW.Rectangular:      fftw = FFTWindow.Rectangular; break;
-            case FFTW.Triangle:         fftw = FFTWindow.Triangle; break;
-        }
     }
 
     void Update ()
     {
-        GetSpectrumAudioSource();
-
-        MakeFrequencyBands();
-        BandBuffer();
-        CreateAudioBands();
-        GetAmplitude();
+        if(audioSource.isPlaying)
+        {
+            GetSpectrumAudioSource();
+            MakeFrequencyBands();
+            BandBuffer();
+            CreateAudioBands();
+            GetAmplitude();
+        }
     }
 
     void GetSpectrumAudioSource()
@@ -139,7 +141,7 @@ public class AudioPeer : MonoBehaviour
             if(frequencyBand[i] < bandBuffer[i])
             {
                 bandBuffer[i] -= bufferDecrease[i];
-                bufferDecrease[i] *= 1.2f;
+                bufferDecrease[i] *= 1.1f;
             }
         }
     }

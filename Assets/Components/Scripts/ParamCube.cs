@@ -9,6 +9,7 @@ public class ParamCube : MonoBehaviour
     public float startScale;
     public float scale;
     public bool useBuffer;
+
     Material material;
 
 	void Start ()
@@ -18,7 +19,9 @@ public class ParamCube : MonoBehaviour
 	
 	void Update ()
     {
-        transform.localScale = new Vector3(transform.localScale.x, useBuffer ? audioPeer.AudioBandBuffer[band] * scale + startScale : audioPeer.AudioBand[band] * scale + startScale, transform.localScale.z);
+        var newScale = useBuffer ? audioPeer.AudioBandBuffer[band] * scale + startScale : audioPeer.AudioBand[band] * scale + startScale;
+
+        transform.localScale = new Vector3(transform.localScale.x, newScale, transform.localScale.z);
         Color color = new Color(audioPeer.AudioBandBuffer[band], audioPeer.AudioBandBuffer[band], audioPeer.AudioBandBuffer[band]);
         material.SetColor("_EmissionColor", color);
 	}

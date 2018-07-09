@@ -6,12 +6,14 @@ using UnityEngine;
 public class ParamLight : MonoBehaviour {
 
     public AudioPeer audioPeer;
-    Light myLight;
+    
     public float minBrightness = 0;
     public float maxBrightness = 10;
     public int band = 4;
 
-	void Start ()
+    Light myLight;
+
+    void Start ()
     {
         myLight = GetComponent<Light>();
 	}

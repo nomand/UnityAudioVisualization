@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Instatiate512Cubes : MonoBehaviour {
+public class FrequencyRing : MonoBehaviour {
 
     public AudioPeer audioPeer;
 
@@ -10,17 +10,20 @@ public class Instatiate512Cubes : MonoBehaviour {
     public float radius = 100f;
     public float scale = 2f;
 
-    private GameObject[] sampleCube = new GameObject[512];
+    private GameObject[] sampleCube;
 
 	void Start ()
     {
-		for(int i = 0; i < 512; i++)
+        sampleCube = new GameObject[audioPeer.FrequencyBands];
+        float angle = 360f / audioPeer.FrequencyBands;
+
+		for(int i = 0; i < audioPeer.FrequencyBands; i++)
         {
             GameObject instance = Instantiate(sampleCubePrefab);
             instance.transform.position = transform.position;
             instance.transform.parent = transform;
             instance.name = "SampleCube" + i;
-            transform.eulerAngles = new Vector3(0, -0.703125f * i);
+            transform.eulerAngles = new Vector3(0, -angle * i, 0);
             instance.transform.position = Vector3.forward * radius;
             instance.transform.eulerAngles = new Vector3(90, 0, 0);
             sampleCube[i] = instance;
