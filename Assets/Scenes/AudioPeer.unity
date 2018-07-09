@@ -767,7 +767,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: be79eef487f04884bb1476a226ecc190, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ce11cf1f72755924f813f9607e1aab33, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -893,7 +893,7 @@ MonoBehaviour:
   Amplitude: 0
   AmplitudeBuffer: 0
   frequencyBand: []
-  FrequencyBands: 512
+  FrequencyBands: 16
   AudioProfile: 0.1
   channel: 0
 --- !u!4 &877672659

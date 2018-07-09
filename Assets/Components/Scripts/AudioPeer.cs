@@ -101,7 +101,7 @@ public class AudioPeer : MonoBehaviour
             else if(channel == Channel.Right)
                 average += samplesRight[i] * (i + 1);
 
-            if (current >= frequencyDistribution[band])
+            if (current == frequencyDistribution[band])
             {
                 if (i != 0) { average /= i; }
                 frequencyBand[band] = average * 10;
