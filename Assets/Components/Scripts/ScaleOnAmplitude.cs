@@ -11,9 +11,12 @@ public class ScaleOnAmplitude : MonoBehaviour
 
 	void Update ()
     {
+        var ampScale = audioPeer.Amplitude * maxScale + startScale;
+        var ampBufferScale = audioPeer.AmplitudeBuffer * maxScale + startScale;
+
         if (!useBuffer)
-            transform.localScale = new Vector3(audioPeer.amplitude * maxScale + startScale, audioPeer.amplitude * maxScale + startScale, audioPeer.amplitude * maxScale + startScale);
+            transform.localScale = new Vector3(1, 1, 1) * ampScale;
         else
-            transform.localScale = new Vector3(audioPeer.amplitudeBuffer * maxScale + startScale, audioPeer.amplitudeBuffer * maxScale + startScale, audioPeer.amplitudeBuffer * maxScale + startScale);
+            transform.localScale = new Vector3(1, 1, 1) * ampBufferScale;
     }
 }

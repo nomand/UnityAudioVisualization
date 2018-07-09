@@ -305,7 +305,7 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   useBuffer: 1
   startScale: 0.5
-  maxScale: 1.2
+  maxScale: 0.55
 --- !u!1001 &114891382
 Prefab:
   m_ObjectHideFlags: 0
@@ -553,13 +553,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 282840810}
-  m_LocalRotation: {x: 0.44652542, y: -0, z: -0, w: 0.8947709}
-  m_LocalPosition: {x: 0, y: 11.11, z: -13.26}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 53.042004, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &390954319
 Prefab:
   m_ObjectHideFlags: 0
@@ -638,7 +638,7 @@ MonoBehaviour:
   band: 2
   startScale: 1
   scale: 300
-  useBuffer: 1
+  useBuffer: 0
 --- !u!4 &417984428 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -709,7 +709,7 @@ MonoBehaviour:
   band: 7
   startScale: 1
   scale: 300
-  useBuffer: 1
+  useBuffer: 0
 --- !u!4 &777784875 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -735,7 +735,7 @@ MonoBehaviour:
   band: 0
   startScale: 1
   scale: 300
-  useBuffer: 1
+  useBuffer: 0
 --- !u!4 &817498826 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -767,7 +767,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2c4c30bac50ab1444b877ca836bde068, type: 3}
+  m_audioClip: {fileID: 8300000, guid: be79eef487f04884bb1476a226ecc190, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -864,12 +864,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb833d8e4f0a25448f309392e58a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioBand: []
-  audioBandBuffer: []
-  amplitude: 0
-  amplitudeBuffer: 0
-  frequencyBands: 8
-  audioProfile: 5
+  FrequencyDistributionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.009280743
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.9425344
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  AudioBand: []
+  AudioBandBuffer: []
+  Amplitude: 0
+  AmplitudeBuffer: 0
+  frequencyBand: []
+  FrequencyBands: 512
+  AudioProfile: 0.1
   channel: 0
 --- !u!4 &877672659
 Transform:
@@ -904,7 +929,7 @@ MonoBehaviour:
   band: 5
   startScale: 1
   scale: 300
-  useBuffer: 1
+  useBuffer: 0
 --- !u!4 &885755330 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -930,7 +955,7 @@ MonoBehaviour:
   band: 4
   startScale: 1
   scale: 300
-  useBuffer: 1
+  useBuffer: 0
 --- !u!4 &959397470 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -1068,7 +1093,7 @@ MonoBehaviour:
   band: 6
   startScale: 1
   scale: 300
-  useBuffer: 1
+  useBuffer: 0
 --- !u!4 &1384626602 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -1140,7 +1165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1480826926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1226,7 +1251,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1534309017}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1240,7 +1265,7 @@ Transform:
   - {fileID: 777784875}
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1585966665
 Prefab:
   m_ObjectHideFlags: 0
@@ -1406,7 +1431,7 @@ MonoBehaviour:
   band: 1
   startScale: 1
   scale: 300
-  useBuffer: 1
+  useBuffer: 0
 --- !u!4 &1881614202 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -1432,7 +1457,7 @@ MonoBehaviour:
   band: 3
   startScale: 1
   scale: 300
-  useBuffer: 1
+  useBuffer: 0
 --- !u!4 &2001478258 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,

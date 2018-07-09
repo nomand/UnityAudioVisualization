@@ -18,6 +18,6 @@ public class ParamLight : MonoBehaviour {
 	
 	void Update ()
     {
-        myLight.intensity = (audioPeer.audioBandBuffer[band] * (maxBrightness - minBrightness)) + minBrightness;
+        myLight.intensity = (audioPeer.AudioBandBuffer[band] * (maxBrightness - minBrightness)) + minBrightness;
 	}
 }
