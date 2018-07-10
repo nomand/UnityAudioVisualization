@@ -349,10 +349,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 0
-  sensitivity: 1
+  sensitivity: 0.1
   useBuffer: 1
   scaleDriver: 0
-  startScale: {x: 0.5, y: 0.5, z: 0.5}
+  startScale: {x: 1, y: 1, z: 1}
   Axis: {x: 1, y: 1, z: 1}
 --- !u!4 &84822902 stripped
 Transform:
@@ -1096,7 +1096,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ce11cf1f72755924f813f9607e1aab33, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1c550de830a6cf94ab6c92738b1187a8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1813,15 +1813,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ae0b16db3440a04db6d48f190a42650, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ae0b16db3440a04db6d48f190a42650, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ae0b16db3440a04db6d48f190a42650, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ae0b16db3440a04db6d48f190a42650, type: 3}
