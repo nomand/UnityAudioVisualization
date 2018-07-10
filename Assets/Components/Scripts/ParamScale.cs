@@ -9,10 +9,20 @@ public class ParamScale : MonoBehaviour
     public float sensitivity = 1;
     public bool useBuffer = true;
 
+    public enum ScaleDriver
+    {
+        Amplitude,
+        AudioBand
+    }
+
+    public ScaleDriver scaleDriver;
+
     [Tooltip("Initial Scale")]
     public Vector3 startScale = new Vector3(1,1,1);
     [Tooltip("Axis magnitude for driving scale")]
     public Vector3 Axis = new Vector3(1,1,1);
+
+    float drivenValue;
 
     private void Start()
     {
@@ -20,13 +30,26 @@ public class ParamScale : MonoBehaviour
         {
             transform.localScale = startScale;
         }
+
+        switch (scaleDriver)
+        {
+            case ScaleDriver.Amplitude: scaleDriver = ScaleDriver.Amplitude; break;
+            case ScaleDriver.AudioBand: scaleDriver = ScaleDriver.AudioBand; break;
+        }
     }
 
     void Update ()
     {
-        var value = useBuffer ? audioPeer.AudioBandBuffer[band] * sensitivity: audioPeer.AudioBand[band] * sensitivity;
+        if(scaleDriver == ScaleDriver.AudioBand)
+        {
+            drivenValue = useBuffer ? audioPeer.AudioBandBuffer[band] * sensitivity : audioPeer.AudioBand[band] * sensitivity;
+        }
+        else if(scaleDriver == ScaleDriver.Amplitude)
+        {
+            drivenValue = useBuffer ? audioPeer.AmplitudeBuffer * sensitivity : audioPeer.Amplitude * sensitivity;
+        }
 
-        transform.localScale = new Vector3(Axis.x * value, Axis.y * value, Axis.z * value) + startScale;
+        transform.localScale = new Vector3(Axis.x * drivenValue, Axis.y * drivenValue, Axis.z * drivenValue) + startScale;
         Color color = new Color(audioPeer.AudioBandBuffer[band], audioPeer.AudioBandBuffer[band], audioPeer.AudioBandBuffer[band]);
 	}
 }
