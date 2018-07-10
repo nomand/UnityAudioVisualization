@@ -22,6 +22,7 @@ public class AudioPeer : MonoBehaviour
     private float[] bandBuffer;
     private float[] bufferDecrease;
     private float[] freqBandHighest;
+    public float[] stereoBandSpread;
 
     private float amplitudeHighest;
 
@@ -60,6 +61,7 @@ public class AudioPeer : MonoBehaviour
         freqBandHighest = new float[FrequencyBands];
         AudioBand = new float[FrequencyBands];
         AudioBandBuffer = new float[FrequencyBands];
+        stereoBandSpread = new float[FrequencyBands];
 
         switch (FrequencyReadMethod)
         {
@@ -114,7 +116,9 @@ public class AudioPeer : MonoBehaviour
             var current = FrequencyDistributionCurve.Evaluate(sample / 512);
 
             if(channel == Channel.Stereo)
+            {
                 average += (samplesLeft[i] + samplesRight[i]) * (i + 1);
+            }
             else if(channel == Channel.Left)
                 average += samplesLeft[i] * (i + 1);
             else if(channel == Channel.Right)
