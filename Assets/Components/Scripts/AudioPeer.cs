@@ -120,9 +120,13 @@ public class AudioPeer : MonoBehaviour
                 average += (samplesLeft[i] + samplesRight[i]) * (i + 1);
             }
             else if(channel == Channel.Left)
+            {
                 average += samplesLeft[i] * (i + 1);
+            }
             else if(channel == Channel.Right)
+            {
                 average += samplesRight[i] * (i + 1);
+            }
 
             if (current == frequencyDistribution[band])
             {
