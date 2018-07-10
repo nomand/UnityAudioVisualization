@@ -5,24 +5,28 @@ using UnityEngine;
 public class ParamScale : MonoBehaviour
 {
     public AudioPeer audioPeer;
-    public int band;
-    public float startScale;
-    public float scale;
-    public bool useBuffer;
+    public int band = 0;
+    public float sensitivity = 1;
+    public bool useBuffer = true;
 
-    Material material;
+    [Tooltip("Initial Scale")]
+    public Vector3 startScale = new Vector3(1,1,1);
+    [Tooltip("Axis magnitude for driving scale")]
+    public Vector3 Axis = new Vector3(1,1,1);
 
-	void Start ()
+    private void Start()
     {
-        material = GetComponent<MeshRenderer>().materials[0];
-	}
-	
-	void Update ()
-    {
-        var newScale = useBuffer ? audioPeer.AudioBandBuffer[band] * scale + startScale : audioPeer.AudioBand[band] * scale + startScale;
+        if(transform.localScale != startScale)
+        {
+            transform.localScale = startScale;
+        }
+    }
 
-        transform.localScale = new Vector3(transform.localScale.x, newScale, transform.localScale.z);
+    void Update ()
+    {
+        var value = useBuffer ? audioPeer.AudioBandBuffer[band] * sensitivity: audioPeer.AudioBand[band] * sensitivity;
+
+        transform.localScale = new Vector3(Axis.x * value, Axis.y * value, Axis.z * value) + startScale;
         Color color = new Color(audioPeer.AudioBandBuffer[band], audioPeer.AudioBandBuffer[band], audioPeer.AudioBandBuffer[band]);
-        material.SetColor("_EmissionColor", color);
 	}
 }

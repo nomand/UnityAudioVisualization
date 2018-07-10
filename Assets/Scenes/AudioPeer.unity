@@ -659,9 +659,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 2
-  startScale: 1
-  scale: 300
-  useBuffer: 0
+  sensitivity: 300
+  useBuffer: 1
+  startScale: {x: 50, y: 50, z: 50}
+  Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &417984428 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -929,9 +930,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 7
-  startScale: 1
-  scale: 300
-  useBuffer: 0
+  sensitivity: 300
+  useBuffer: 1
+  startScale: {x: 50, y: 50, z: 50}
+  Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &777784875 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -955,9 +957,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 0
-  startScale: 1
-  scale: 300
-  useBuffer: 0
+  sensitivity: 300
+  useBuffer: 1
+  startScale: {x: 50, y: 50, z: 50}
+  Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &817498826 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -1164,9 +1167,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 5
-  startScale: 1
-  scale: 300
-  useBuffer: 0
+  sensitivity: 300
+  useBuffer: 1
+  startScale: {x: 50, y: 50, z: 50}
+  Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &885755330 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -1190,9 +1194,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 4
-  startScale: 1
-  scale: 300
-  useBuffer: 0
+  sensitivity: 300
+  useBuffer: 1
+  startScale: {x: 50, y: 50, z: 50}
+  Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &959397470 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -1518,9 +1523,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 6
-  startScale: 1
-  scale: 300
-  useBuffer: 0
+  sensitivity: 300
+  useBuffer: 1
+  startScale: {x: 50, y: 50, z: 50}
+  Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &1384626602 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -2009,9 +2015,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 1
-  startScale: 1
-  scale: 300
-  useBuffer: 0
+  sensitivity: 300
+  useBuffer: 1
+  startScale: {x: 50, y: 50, z: 50}
+  Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &1881614202 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -2035,9 +2042,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 3
-  startScale: 1
-  scale: 300
-  useBuffer: 0
+  sensitivity: 300
+  useBuffer: 1
+  startScale: {x: 50, y: 50, z: 50}
+  Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &2001478258 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
