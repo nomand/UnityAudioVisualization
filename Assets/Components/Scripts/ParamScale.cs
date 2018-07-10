@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParamCube : MonoBehaviour
+public class ParamScale : MonoBehaviour
 {
     public AudioPeer audioPeer;
     public int band;

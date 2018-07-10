@@ -65,13 +65,13 @@ public class AudioPeer : MonoBehaviour
 
         switch (FrequencyReadMethod)
         {
-            case FFTW.Blackman: fftw = FFTWindow.Blackman; break;
-            case FFTW.BlackmanHarris: fftw = FFTWindow.BlackmanHarris; break;
-            case FFTW.Hamming: fftw = FFTWindow.Hamming; break;
-            case FFTW.Hanning: fftw = FFTWindow.Hanning; break;
-            case FFTW.Rectangular: fftw = FFTWindow.Rectangular; break;
-            case FFTW.Triangle: fftw = FFTWindow.Triangle; break;
-            default: fftw = FFTWindow.Blackman; break;
+            case FFTW.Blackman:         fftw = FFTWindow.Blackman; break;
+            case FFTW.BlackmanHarris:   fftw = FFTWindow.BlackmanHarris; break;
+            case FFTW.Hamming:          fftw = FFTWindow.Hamming; break;
+            case FFTW.Hanning:          fftw = FFTWindow.Hanning; break;
+            case FFTW.Rectangular:      fftw = FFTWindow.Rectangular; break;
+            case FFTW.Triangle:         fftw = FFTWindow.Triangle; break;
+            default:                    fftw = FFTWindow.Blackman; break;
         }
 
         GetFrequencyDistribution();
