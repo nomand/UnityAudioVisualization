@@ -154,15 +154,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1815464489175490, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_Name
@@ -178,6 +178,11 @@ Prefab:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33859227820867678, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
   m_IsPrefabParent: 0
@@ -222,15 +227,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1815464489175490, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_Name
@@ -246,6 +251,11 @@ Prefab:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33859227820867678, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
   m_IsPrefabParent: 0
@@ -290,15 +300,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1815464489175490, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_Name
@@ -314,6 +324,11 @@ Prefab:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33859227820867678, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
   m_IsPrefabParent: 0
@@ -340,6 +355,24 @@ MonoBehaviour:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0ae0b16db3440a04db6d48f190a42650, type: 3}
   m_PrefabInternal: {fileID: 1478635115}
+--- !u!114 &84822903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84822898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbcaa6bdb02c3bd4fb822c77137588a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
+  band: 5
+  useBuffer: 0
+  Tint: {r: 0, g: 0.9898968, b: 1, a: 0}
+  valueType: 0
+  sensitivity: 10
+  ShaderProperty: _EmissionColor
 --- !u!1001 &114891382
 Prefab:
   m_ObjectHideFlags: 0
@@ -381,15 +414,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1815464489175490, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_Name
@@ -405,6 +438,11 @@ Prefab:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33859227820867678, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
   m_IsPrefabParent: 0
@@ -614,15 +652,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1815464489175490, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_Name
@@ -638,6 +676,11 @@ Prefab:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33859227820867678, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
   m_IsPrefabParent: 0
@@ -659,15 +702,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 2
-  sensitivity: 300
+  sensitivity: 10
   useBuffer: 1
-  startScale: {x: 50, y: 50, z: 50}
+  startScale: {x: 0.5, y: 0.5, z: 0.5}
   Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &417984428 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
     type: 2}
   m_PrefabInternal: {fileID: 390954319}
+--- !u!114 &417984429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 417984424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbcaa6bdb02c3bd4fb822c77137588a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
+  band: 2
+  useBuffer: 1
+  Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
+  valueType: 0
+  sensitivity: 1
+  ShaderProperty: _EmissionColor
 --- !u!1 &463193933
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,15 +991,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 7
-  sensitivity: 300
+  sensitivity: 10
   useBuffer: 1
-  startScale: {x: 50, y: 50, z: 50}
+  startScale: {x: 0.5, y: 0.5, z: 0.5}
   Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &777784875 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
     type: 2}
   m_PrefabInternal: {fileID: 1318240918}
+--- !u!114 &777784876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 777784871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbcaa6bdb02c3bd4fb822c77137588a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
+  band: 7
+  useBuffer: 1
+  Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
+  valueType: 0
+  sensitivity: 1
+  ShaderProperty: _EmissionColor
 --- !u!1 &817498822 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1815464489175490, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -957,15 +1036,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 0
-  sensitivity: 300
+  sensitivity: 10
   useBuffer: 1
-  startScale: {x: 50, y: 50, z: 50}
+  startScale: {x: 0.5, y: 0.5, z: 0.5}
   Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &817498826 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
     type: 2}
   m_PrefabInternal: {fileID: 1330140193}
+--- !u!114 &817498827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 817498822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbcaa6bdb02c3bd4fb822c77137588a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
+  band: 0
+  useBuffer: 1
+  Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
+  valueType: 0
+  sensitivity: 1
+  ShaderProperty: _EmissionColor
 --- !u!1 &877672656
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,7 +1090,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1211dcf500e526f4b9e9d90c3748baa6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ce11cf1f72755924f813f9607e1aab33, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1167,15 +1264,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 5
-  sensitivity: 300
+  sensitivity: 10
   useBuffer: 1
-  startScale: {x: 50, y: 50, z: 50}
+  startScale: {x: 0.5, y: 0.5, z: 0.5}
   Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &885755330 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
     type: 2}
   m_PrefabInternal: {fileID: 28507302}
+--- !u!114 &885755331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885755326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbcaa6bdb02c3bd4fb822c77137588a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
+  band: 5
+  useBuffer: 1
+  Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
+  valueType: 0
+  sensitivity: 1
+  ShaderProperty: _EmissionColor
 --- !u!1 &959397466 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1815464489175490, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -1194,15 +1309,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 4
-  sensitivity: 300
+  sensitivity: 10
   useBuffer: 1
-  startScale: {x: 50, y: 50, z: 50}
+  startScale: {x: 0.5, y: 0.5, z: 0.5}
   Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &959397470 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
     type: 2}
   m_PrefabInternal: {fileID: 114891382}
+--- !u!114 &959397471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 959397466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbcaa6bdb02c3bd4fb822c77137588a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
+  band: 4
+  useBuffer: 1
+  Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
+  valueType: 0
+  sensitivity: 1
+  ShaderProperty: _EmissionColor
 --- !u!1 &1025029572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,15 +1479,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1815464489175490, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_Name
@@ -1370,6 +1503,11 @@ Prefab:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33859227820867678, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
   m_IsPrefabParent: 0
@@ -1414,15 +1552,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 23069914588986428, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
         type: 2}
@@ -1434,6 +1572,11 @@ Prefab:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33859227820867678, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
   m_IsPrefabParent: 0
@@ -1523,15 +1666,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 6
-  sensitivity: 300
+  sensitivity: 10
   useBuffer: 1
-  startScale: {x: 50, y: 50, z: 50}
+  startScale: {x: 0.5, y: 0.5, z: 0.5}
   Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &1384626602 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
     type: 2}
   m_PrefabInternal: {fileID: 35218269}
+--- !u!114 &1384626603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1384626598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbcaa6bdb02c3bd4fb822c77137588a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
+  band: 6
+  useBuffer: 1
+  Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
+  valueType: 0
+  sensitivity: 1
+  ShaderProperty: _EmissionColor
 --- !u!1 &1425292731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,15 +2004,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1815464489175490, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
       propertyPath: m_Name
@@ -1867,6 +2028,11 @@ Prefab:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33859227820867678, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38bd5cbcc1f3275488782a6190fd4ca0, type: 2}
   m_IsPrefabParent: 0
@@ -2015,15 +2181,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 1
-  sensitivity: 300
+  sensitivity: 10
   useBuffer: 1
-  startScale: {x: 50, y: 50, z: 50}
+  startScale: {x: 0.5, y: 0.5, z: 0.5}
   Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &1881614202 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
     type: 2}
   m_PrefabInternal: {fileID: 26010828}
+--- !u!114 &1881614203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1881614198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbcaa6bdb02c3bd4fb822c77137588a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
+  band: 1
+  useBuffer: 1
+  Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
+  valueType: 0
+  sensitivity: 1
+  ShaderProperty: _EmissionColor
 --- !u!1 &2001478254 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1815464489175490, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
@@ -2042,15 +2226,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
   band: 3
-  sensitivity: 300
+  sensitivity: 10
   useBuffer: 1
-  startScale: {x: 50, y: 50, z: 50}
+  startScale: {x: 0.5, y: 0.5, z: 0.5}
   Axis: {x: 0, y: 1, z: 0}
 --- !u!4 &2001478258 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4545825847735662, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
     type: 2}
   m_PrefabInternal: {fileID: 1585966665}
+--- !u!114 &2001478259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2001478254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbcaa6bdb02c3bd4fb822c77137588a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPeer: {fileID: 877672658}
+  band: 3
+  useBuffer: 1
+  Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
+  valueType: 0
+  sensitivity: 1
+  ShaderProperty: _EmissionColor
 --- !u!1 &2006171192
 GameObject:
   m_ObjectHideFlags: 0
