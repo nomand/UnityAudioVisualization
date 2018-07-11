@@ -11,7 +11,7 @@ public class AudioPeer : MonoBehaviour
     float[] frequencyDistribution = new float[512];
 
     [HideInInspector]
-    public float[] AudioBand, AudioBandBuffer;
+    public float[] AudioBand, AudioBandBuffer, stereoBandSpread, stereoBandBufferSpread;
     [HideInInspector]
     public float Amplitude, AmplitudeBuffer;
     
@@ -22,7 +22,6 @@ public class AudioPeer : MonoBehaviour
     private float[] bandBuffer;
     private float[] bufferDecrease;
     private float[] freqBandHighest;
-    public float[] stereoBandSpread;
 
     private float amplitudeHighest;
 
@@ -109,29 +108,35 @@ public class AudioPeer : MonoBehaviour
     {
         int band = 0;
         float average = 0;
+        float stereoLeft = 0;
+        float stereoRight = 0;
 
         for (int i = 0; i < 512; i++)
         {
             var sample = (float)i;
             var current = FrequencyDistributionCurve.Evaluate(sample / 512);
 
-            if(channel == Channel.Stereo)
-            {
-                average += (samplesLeft[i] + samplesRight[i]) * (i + 1);
-            }
-            else if(channel == Channel.Left)
-            {
-                average += samplesLeft[i] * (i + 1);
-            }
-            else if(channel == Channel.Right)
-            {
-                average += samplesRight[i] * (i + 1);
-            }
+            stereoLeft += (samplesLeft[i]) * (i + 1);
+            stereoRight += (samplesRight[i]) * (i + 1);
+
+            if (channel == Channel.Stereo)
+                average += stereoLeft + stereoRight;
+            else if (channel == Channel.Left)
+                average += stereoLeft;
+            else if (channel == Channel.Right)
+                average += stereoRight;
 
             if (current == frequencyDistribution[band])
             {
-                if (i != 0) { average /= i; }
+                if (i != 0)
+                {
+                    average /= i;
+                    stereoLeft /= i;
+                    stereoRight /= i;
+                }
+
                 frequencyBand[band] = average * 10;
+                stereoBandSpread[band] = stereoLeft - stereoRight;
                 band++;
             }
         }
