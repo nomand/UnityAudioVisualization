@@ -5,8 +5,6 @@ using UnityEngine;
 public class ParamStereo : MonoBehaviour {
 
     public AudioPeer audioPeer;
-    public int band;
-    public float sensitivity = 1f;
 
     public enum Channel
     {
@@ -15,13 +13,15 @@ public class ParamStereo : MonoBehaviour {
         Right
     }
     public Channel channel = new Channel();
+    
+    public int band;
+    public float sensitivity = 1f;
+    public float smoothing = 1f;
 
     public bool useBuffer;
 
-    float stereo;
-    float stereoBuffer = 0;
-    float stereoBufferReturnRate;
-    float returnToZero;
+    private float stereo;
+    private float stereoBuffer = 0f;
 
     void Update ()
     {
@@ -44,6 +44,6 @@ public class ParamStereo : MonoBehaviour {
     float GetStereoBuffer()
     {
         var diff = stereoBuffer - stereo;
-        return stereoBuffer = Mathf.Lerp(diff, 0f, Time.deltaTime);
+        return stereoBuffer = Mathf.Lerp(diff, 0f, Time.deltaTime * smoothing);
     }
 }

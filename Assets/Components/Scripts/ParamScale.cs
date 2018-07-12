@@ -50,6 +50,5 @@ public class ParamScale : MonoBehaviour
         }
 
         transform.localScale = new Vector3(Axis.x * drivenValue, Axis.y * drivenValue, Axis.z * drivenValue) + startScale;
-        Color color = new Color(audioPeer.AudioBandBuffer[band], audioPeer.AudioBandBuffer[band], audioPeer.AudioBandBuffer[band]);
 	}
 }
