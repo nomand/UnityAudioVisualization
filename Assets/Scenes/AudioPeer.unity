@@ -370,11 +370,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
-  band: 5
-  useBuffer: 0
+  band: 2
+  useBuffer: 1
+  sensitivity: 1
   Tint: {r: 0, g: 0.9898968, b: 1, a: 0}
   valueType: 0
-  sensitivity: 10
   ShaderProperty: _EmissionColor
 --- !u!1001 &114891382
 Prefab:
@@ -584,8 +584,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 23.24
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 341842259}
   - component: {fileID: 341842258}
   m_Layer: 0
-  m_Name: StereoCube
+  m_Name: Stereo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -703,7 +703,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 341842257}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &341842262
 Transform:
   m_ObjectHideFlags: 0
@@ -711,8 +711,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 341842257}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.4, z: -5.35}
-  m_LocalScale: {x: 0.26609892, y: 1, z: 1}
+  m_LocalPosition: {x: -0, y: -5.92, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1745007128}
   m_RootOrder: 0
@@ -832,9 +832,9 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 2
   useBuffer: 1
+  sensitivity: 1
   Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
   valueType: 0
-  sensitivity: 1
   ShaderProperty: _EmissionColor
 --- !u!1 &463193933
 GameObject:
@@ -1122,9 +1122,9 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 7
   useBuffer: 1
+  sensitivity: 1
   Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
   valueType: 0
-  sensitivity: 1
   ShaderProperty: _EmissionColor
 --- !u!1 &817498822 stripped
 GameObject:
@@ -1168,9 +1168,9 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 0
   useBuffer: 1
+  sensitivity: 1
   Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
   valueType: 0
-  sensitivity: 1
   ShaderProperty: _EmissionColor
 --- !u!1 &877672656
 GameObject:
@@ -1199,7 +1199,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: be79eef487f04884bb1476a226ecc190, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2c4c30bac50ab1444b877ca836bde068, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1326,7 +1326,8 @@ MonoBehaviour:
   stereoBandBufferSpread: []
   Amplitude: 0
   AmplitudeBuffer: 0
-  FrequencyBands: 8
+  frequencyBand: []
+  FrequencyBands: 50
   AudioProfile: 0.1
   channel: 0
   FrequencyReadMethod: 4
@@ -1398,9 +1399,9 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 5
   useBuffer: 1
+  sensitivity: 1
   Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
   valueType: 0
-  sensitivity: 1
   ShaderProperty: _EmissionColor
 --- !u!1 &959397466 stripped
 GameObject:
@@ -1444,9 +1445,9 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 4
   useBuffer: 1
+  sensitivity: 1
   Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
   valueType: 0
-  sensitivity: 1
   ShaderProperty: _EmissionColor
 --- !u!1 &1025029572
 GameObject:
@@ -1802,9 +1803,9 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 6
   useBuffer: 1
+  sensitivity: 1
   Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
   valueType: 0
-  sensitivity: 1
   ShaderProperty: _EmissionColor
 --- !u!1 &1425292731
 GameObject:
@@ -1946,7 +1947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1480826926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1961,7 +1962,7 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   minBrightness: 0
   maxBrightness: 40
-  band: 10
+  band: 2
 --- !u!108 &1480826927
 Light:
   m_ObjectHideFlags: 0
@@ -2331,9 +2332,9 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 1
   useBuffer: 1
+  sensitivity: 1
   Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
   valueType: 0
-  sensitivity: 1
   ShaderProperty: _EmissionColor
 --- !u!1 &2001478254 stripped
 GameObject:
@@ -2377,9 +2378,9 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   band: 3
   useBuffer: 1
+  sensitivity: 1
   Tint: {r: 1, g: 0.23032942, b: 0, a: 0}
   valueType: 0
-  sensitivity: 1
   ShaderProperty: _EmissionColor
 --- !u!1 &2006171192
 GameObject:
@@ -2411,8 +2412,9 @@ MonoBehaviour:
   audioPeer: {fileID: 877672658}
   sampleCubePrefab: {fileID: 1815464489175490, guid: 38bd5cbcc1f3275488782a6190fd4ca0,
     type: 2}
-  radius: 10
-  scale: 1000
+  StartScale: {x: 1, y: 1, z: 1}
+  Radius: 10
+  Sensitivity: 2
 --- !u!4 &2006171194
 Transform:
   m_ObjectHideFlags: 0

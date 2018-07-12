@@ -13,21 +13,19 @@ public class ParamMaterial : MonoBehaviour
     public AudioPeer audioPeer;
     public int band;
     public bool useBuffer;
-    public Color Tint;
-
-    public ValueType valueType = new ValueType();
-
     public float sensitivity;
 
+    public Color Tint;
+    public ValueType valueType = new ValueType();
     public string ShaderProperty = "_EmissionColor";
 
-    Material material;
+    private Material material;
 
 	void Start ()
     {
         material = GetComponent<MeshRenderer>().materials[0];
 
-        switch(valueType)
+        switch (valueType)
         {
             case ValueType.Color: valueType = ValueType.Color; break;
             case ValueType.Float: valueType = ValueType.Float; break;
@@ -39,7 +37,7 @@ public class ParamMaterial : MonoBehaviour
         var value = useBuffer ? audioPeer.AudioBandBuffer[band] : audioPeer.AudioBand[band];
         value *= sensitivity;
 
-        Color color = new Color(value, value, value) * Tint;
+        Color color = new Color(value, value, value) * Tint + Tint;
 
         if (valueType == ValueType.Color)
         {
