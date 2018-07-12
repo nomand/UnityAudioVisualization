@@ -645,9 +645,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 877672658}
-  band: 2
-  sensitivity: 100
   channel: 0
+  band: 2
+  sensitivity: 10
+  smoothing: 0.5
   useBuffer: 1
 --- !u!65 &341842259
 BoxCollider:
@@ -1198,7 +1199,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1211dcf500e526f4b9e9d90c3748baa6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: be79eef487f04884bb1476a226ecc190, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1322,9 +1323,10 @@ MonoBehaviour:
   AudioBand: []
   AudioBandBuffer: []
   stereoBandSpread: []
+  stereoBandBufferSpread: []
   Amplitude: 0
   AmplitudeBuffer: 0
-  FrequencyBands: 512
+  FrequencyBands: 8
   AudioProfile: 0.1
   channel: 0
   FrequencyReadMethod: 4
