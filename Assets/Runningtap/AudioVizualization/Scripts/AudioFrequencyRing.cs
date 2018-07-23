@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FrequencyRing : MonoBehaviour {
+public class AudioFrequencyRing : MonoBehaviour
+{
 
     public Runningtap.AnalyzeAudio audioData;
 

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParamStereo : MonoBehaviour {
-
+public class AudioParamStereo : MonoBehaviour
+{
     public Runningtap.AnalyzeAudio audioData;
 
     public enum Channel
@@ -12,12 +12,11 @@ public class ParamStereo : MonoBehaviour {
         Left,
         Right
     }
+
     public Channel channel = new Channel();
-    
     public int band;
     public float sensitivity = 1f;
     public float smoothing = 1f;
-
     public bool useBuffer;
 
     private float stereo;

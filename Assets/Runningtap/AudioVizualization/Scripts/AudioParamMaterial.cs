@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParamMaterial : MonoBehaviour
+public class AudioParamMaterial : MonoBehaviour
 {
     public enum ValueType
     {

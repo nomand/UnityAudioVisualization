@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParamScale : MonoBehaviour
+public class AudioParamScale : MonoBehaviour
 {
     public Runningtap.AnalyzeAudio audioData;
     public int band = 0;
@@ -22,7 +22,7 @@ public class ParamScale : MonoBehaviour
     [Tooltip("Axis magnitude for driving scale")]
     public Vector3 Axis = new Vector3(1,1,1);
 
-    float drivenValue;
+    private float drivenValue;
 
     private void Start()
     {
