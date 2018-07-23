@@ -4,10 +4,9 @@ using UnityEngine;
 
 namespace Runningtap
 {
-    [RequireComponent (typeof(AudioSource))]
     public class AnalyzeAudio : MonoBehaviour
     {
-        AudioSource audioSource;
+        public AudioSource audioSource;
 
         public AnimationCurve FrequencyDistributionCurve;
         float[] frequencyDistribution = new float[512];
@@ -20,7 +19,7 @@ namespace Runningtap
         private float[] samplesLeft = new float[512];
         private float[] samplesRight = new float[512];
 
-        public float[] frequencyBand;
+        private float[] frequencyBand;
         private float[] bandBuffer;
         private float[] bufferDecrease;
         private float[] freqBandHighest;
@@ -54,8 +53,6 @@ namespace Runningtap
 
 	    void Start ()
         {
-            audioSource = GetComponent<AudioSource>();
-
             frequencyBand = new float[FrequencyBands];
             bandBuffer = new float[FrequencyBands];
             bufferDecrease = new float[FrequencyBands];
