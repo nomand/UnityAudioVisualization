@@ -1,6 +1,7 @@
 MIT License
 
 Copyright (c) 2018 Alexey Botkov, [nomand.co](http://nomand.co) [runningtap.com](http://runningtap.com)
+
 Copyright (c) 2017 Peter Olthof, [Peer Play](http://www.peerplay.nl), info AT peerplay.nl
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
